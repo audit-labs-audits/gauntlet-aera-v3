@@ -1,0 +1,209 @@
+{
+  "title": "2.1: Core Types: Overview",
+  "id": "j9ej+4YgoKDnWENpB3Jw+WQTXSrzDquvgcaul3HvYMI=",
+  "originalId": 4432,
+  "position": 2,
+  "steps": [
+    {
+      "type": "highlight",
+      "description": "`Constants.sol` starts with license and compiler directives, establishing a file of shared low-level constants.",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 1,
+          "end": 3
+        }
+      ],
+      "title": "",
+      "id": "52714"
+    },
+    {
+      "type": "highlight",
+      "description": "Memory & Calldata constants:\n\n- `WORD_SIZE`\n- `SELECTOR_SIZE`\n- `MINIMUM_CALLDATA_LENGTH`\n- `CALLDATA_OFFSET`\n- `ERC20_SPENDER_OFFSET`\n- `ADDRESS_SIZE_BITS`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 4,
+          "end": 24
+        }
+      ],
+      "title": "",
+      "id": "52715"
+    },
+    {
+      "type": "highlight",
+      "description": "Hooks Constants:\n\n- `BEFORE_HOOK_MASK`\n- `AFTER_HOOK_MASK`\n- `HOOKS_FLAG_MASK`\n- `CONFIGURABLE_HOOKS_LENGTH_MASK`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 26,
+          "end": 38
+        }
+      ],
+      "title": "",
+      "id": "52716"
+    },
+    {
+      "type": "highlight",
+      "description": "Bit Operations:\n\n- `MASK_8_BIT`\n- `MASK_16_BIT`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 42,
+          "end": 51
+        }
+      ],
+      "title": "",
+      "id": "52717"
+    },
+    {
+      "type": "highlight",
+      "description": "Pipeline Constants:\n\n- `RESULTS_INDEX_OFFSET`\n- `COPY_WORD_OFFSET`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 52,
+          "end": 61
+        }
+      ],
+      "title": "",
+      "id": "52718"
+    },
+    {
+      "type": "highlight",
+      "description": "Extractor Constants:\n\n- `EXTRACT_OFFSET_SIZE_BITS`\n- `EXTRACTION_OFFSET_SHIFT_BITS`\n- `MAX_EXTRACT_OFFSETS_EXCLUSIVE`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 63,
+          "end": 74
+        }
+      ],
+      "title": "",
+      "id": "52719"
+    },
+    {
+      "type": "highlight",
+      "description": "Callback Constants:\n\n- `NO_CALLBACK_DATA`\n- `SELECTOR_OFFSET`\n- `CALLBACK_DATA_OFFSET`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 75,
+          "end": 86
+        }
+      ],
+      "title": "",
+      "id": "52720"
+    },
+    {
+      "type": "highlight",
+      "description": "This section defines several constants used for fee calculations:\n- `ONE_IN_BPS`: Represents 100% in basis points, with a value of `1e4` (10,000).\n- `MAX_TVL_FEE`: The maximum fee based on Total Value Locked (TVL), capped at 2,000 bps (20%).\n- `MAX_PERFORMANCE_FEE`: The maximum performance fee, capped at 100% (equal to `ONE_IN_BPS`).\n- `SECONDS_PER_YEAR`: Defines the number of seconds in a year for time-based calculations, set to `365 days`.\n- `MAX_DISPUTE_PERIOD`: The maximum allowed time for a dispute, set to `30 days`.",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 88,
+          "end": 106
+        }
+      ],
+      "title": "",
+      "id": "52721"
+    },
+    {
+      "type": "highlight",
+      "description": "Unit Price Constants:\n\n- `UNIT_PRICE_PRECISION`\n- `ONE_MINUTE`\n- `ONE_DAY`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 107,
+          "end": 119
+        }
+      ],
+      "title": "",
+      "id": "52722"
+    },
+    {
+      "type": "highlight",
+      "description": "**Provisioner Constants:**\n\n- `MIN_DEPOSIT_MULTIPLIER`  \n- `MIN_REDEEM_MULTIPLIER`  \n- `DEPOSIT_REDEEM_FLAG`  \n- `AUTO_PRICE_FIXED_PRICE_FLAG`  \n- `ONE_UNIT`  \n- `MAX_SECONDS_TO_DEADLINE`  \n- `MAX_DEPOSIT_REFUND_TIMEOUT`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 120,
+          "end": 143
+        }
+      ],
+      "title": "",
+      "id": "52723"
+    },
+    {
+      "type": "highlight",
+      "description": "Whitelist Constants:\n\n- `IS_WHITELISTED_FLAG`",
+      "file": "src/core/Constants.sol",
+      "highlight": [
+        {
+          "start": 146,
+          "end": 151
+        }
+      ],
+      "title": "",
+      "id": "52724"
+    },
+    {
+      "type": "highlight",
+      "description": "Top of `Types.sol` shows imports of external and core dependencies for token handling, authority, hooks, whitelist, and oracle.",
+      "file": "src/core/Types.sol",
+      "highlight": [
+        {
+          "start": 1,
+          "end": 10
+        }
+      ],
+      "title": "",
+      "id": "52725"
+    },
+    {
+      "type": "highlight",
+      "description": "Enums in `Types.sol`:\n\n- `RequestType`\n- `ReturnValueType`\n- `HookCallType`",
+      "file": "src/core/Types.sol",
+      "highlight": [
+        {
+          "start": 17,
+          "end": 41
+        }
+      ],
+      "title": "",
+      "id": "52726"
+    },
+    {
+      "type": "highlight",
+      "description": "Core Structs:\n\n- `Operation`\n- `OperationContext`",
+      "file": "src/core/Types.sol",
+      "highlight": [
+        {
+          "start": 43,
+          "end": 82
+        }
+      ],
+      "title": "",
+      "id": "52727"
+    },
+    {
+      "type": "highlight",
+      "description": "Remaining Structs:\n\n`OperationPayable`, `Approval`, `TokenAmount`, `Clipboard`, `CallbackData`, `BaseVaultParameters`, `FeeVaultParameters`, `ERC20Parameters`, `Fee`, `VaultAccruals`, `VaultSnapshot`, `TargetCalldata`, `VaultPriceState`, `TokenDetails`, `Request`, `OracleData`",
+      "file": "src/core/Types.sol",
+      "highlight": [
+        {
+          "start": 84,
+          "end": 280
+        }
+      ],
+      "title": "",
+      "id": "52728"
+    },
+    {
+      "type": "textOnly",
+      "description": "- `Constants.sol` defines memory layouts, bit masks, hook flags, fee/time units and more.\n- `Types.sol` defines **enums** and **structs** underpinning vault operations, configuration, state, and oracle data.",
+      "title": "",
+      "id": "52729"
+    }
+  ]
+}

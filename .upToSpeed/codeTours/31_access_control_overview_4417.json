@@ -1,0 +1,137 @@
+{
+  "title": "3.1: Access Control: Overview",
+  "id": "OMB9tdVCuk5Cp2aJzvMCpMvZAfMrO6+Ka6LMiF0//EY=",
+  "originalId": 4417,
+  "position": 5,
+  "steps": [
+    {
+      "type": "textOnly",
+      "description": "This walk-through covers `Aera’s Access Control module`, showing how ownership and permissions are structured across `Auth2Step`, `Whitelist`, `VaultAuth`, and their interfaces.",
+      "title": "",
+      "id": "52628"
+    },
+    {
+      "type": "highlight",
+      "description": "Auth2Step introduces a `pendingOwner` slot (line 15) to require transfers to be explicitly accepted, instead of immediate ownership changes.",
+      "file": "src/core/Auth2Step.sol",
+      "highlight": [
+        {
+          "start": 14,
+          "end": 16
+        }
+      ],
+      "title": "",
+      "id": "52629"
+    },
+    {
+      "type": "highlight",
+      "description": "`acceptOwnership` (lines 32–45) ensures only `pendingOwner` can finalize the transfer, sets `owner`, clears `pendingOwner`, and emits `OwnershipTransferred`.",
+      "file": "src/core/Auth2Step.sol",
+      "highlight": [
+        {
+          "start": 32,
+          "end": 45
+        }
+      ],
+      "title": "",
+      "id": "52630"
+    },
+    {
+      "type": "highlight",
+      "description": "`transferOwnership` (lines 52–59) lets the current `owner` nominate a `pendingOwner`, emitting `OwnershipTransferStarted` without instantly changing control.",
+      "file": "src/core/Auth2Step.sol",
+      "highlight": [
+        {
+          "start": 52,
+          "end": 59
+        }
+      ],
+      "title": "",
+      "id": "52631"
+    },
+    {
+      "type": "highlight",
+      "description": "`Whitelist` inherits `Auth2Step` to secure calls and uses an `EnumerableMap.AddressToUintMap` (line 19) to track whitelisted addresses.",
+      "file": "src/core/Whitelist.sol",
+      "highlight": [
+        {
+          "start": 11,
+          "end": 19
+        }
+      ],
+      "title": "",
+      "id": "52632"
+    },
+    {
+      "type": "highlight",
+      "description": "`setWhitelisted` (lines 27–38) toggles membership by inserting or removing the `IS_WHITELISTED_FLAG`, and emits `WhitelistSet` under `requiresAuth`.",
+      "file": "src/core/Whitelist.sol",
+      "highlight": [
+        {
+          "start": 27,
+          "end": 38
+        }
+      ],
+      "title": "",
+      "id": "52633"
+    },
+    {
+      "type": "highlight",
+      "description": "`isWhitelisted` & `getAllWhitelisted` (lines 41–49) allow external checks of membership and retrieval of all whitelisted addresses.",
+      "file": "src/core/Whitelist.sol",
+      "highlight": [
+        {
+          "start": 41,
+          "end": 49
+        }
+      ],
+      "title": "",
+      "id": "52634"
+    },
+    {
+      "type": "highlight",
+      "description": "**`requiresVaultAuth`** (lines 21–28) **modifier** enforces that calls come from the vault’s **`owner()`** or its **`authority().canCall(...)`**, otherwise reverts.",
+      "file": "src/core/VaultAuth.sol",
+      "highlight": [
+        {
+          "start": 21,
+          "end": 28
+        }
+      ],
+      "title": "",
+      "id": "52635"
+    },
+    {
+      "type": "highlight",
+      "description": "IAuth2Step declares the `OwnershipTransferStarted` event (line 12) and `acceptOwnership()` function (line 26), mirroring `Auth2Step`’s public API.",
+      "file": "src/core/interfaces/IAuth2Step.sol",
+      "highlight": [
+        {
+          "start": 11,
+          "end": 27
+        }
+      ],
+      "title": "",
+      "id": "52636"
+    },
+    {
+      "type": "highlight",
+      "description": "IWhitelist defines the `WhitelistSet` event (line 9) and the external functions `setWhitelisted`, `isWhitelisted`, and `getAllWhitelisted` for managing the global whitelist.",
+      "file": "src/core/interfaces/IWhitelist.sol",
+      "highlight": [
+        {
+          "start": 9,
+          "end": 27
+        }
+      ],
+      "title": "",
+      "id": "52637"
+    },
+    {
+      "type": "textOnly",
+      "description": "Together, these layers provide two-step ownership for critical contracts, global role-based whitelisting, and vault-specific access checks via owner or authority.",
+      "title": "",
+      "id": "52638"
+    }
+  ]
+}

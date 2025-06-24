@@ -1,0 +1,42 @@
+{
+  "packageName": "gauntlet-aera-v3",
+  "packageVersion": 1,
+  "hash": "66aeb0b4bae41e46a4c3c1a4298a99d6e0003da6",
+  "numberOfTours": 4,
+  "titleOfTours": [
+    "1.1: Aera Protocol High-Level Overview",
+    "2.1: Core Types: Overview",
+    "3.1: Access Control: Overview",
+    "4.1: Want to learn more?"
+  ],
+  "totalNumberOfSteps": 52,
+  "filesCovered": [
+    "README.md",
+    "src/core/BaseVault.sol",
+    "src/core/interfaces/IBaseVault.sol",
+    "src/core/SingleDepositorVault.sol",
+    "src/core/MultiDepositorVault.sol",
+    "src/core/SingleDepositorVaultFactory.sol",
+    "src/core/MultiDepositorVaultFactory.sol",
+    "src/core/interfaces/IFeeCalculator.sol",
+    "src/core/BaseFeeCalculator.sol",
+    "src/core/DelayedFeeCalculator.sol",
+    "src/core/interfaces/IProvisioner.sol",
+    "src/core/Provisioner.sol",
+    "src/core/interfaces/ISubmitHooks.sol",
+    "src/periphery/hooks/slippage/BaseSlippageHooks.sol",
+    "src/periphery/Executor.sol",
+    "src/periphery/Forwarder.sol",
+    "src/periphery/MilkmanRouter.sol",
+    "src/periphery/OracleRegistry.sol",
+    "src/periphery/ComputeBaseVaultAddressLens.sol",
+    "src/core/Constants.sol",
+    "src/core/Types.sol",
+    "src/core/Auth2Step.sol",
+    "src/core/Whitelist.sol",
+    "src/core/VaultAuth.sol",
+    "src/core/interfaces/IAuth2Step.sol",
+    "src/core/interfaces/IWhitelist.sol"
+  ],
+  "numberOfFilesCovered": 26
+}
